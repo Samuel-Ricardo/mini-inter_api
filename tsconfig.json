@@ -3,7 +3,18 @@
 
     "rootDir": "./src",
     "outDir": "./build",
+    "moduleResolution": "node",
+    "noImplicitReturns": false,
 
+    "emitDecoratorMetadata": true,
+      "strictPropertyInitialization": false,
+      "experimentalDecorators": true,
+      "typeRoots": [
+        "./src/@types",
+        "./@types",
+        "./node_modules/@types"
+      ]
+      
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
     /* Projects */
