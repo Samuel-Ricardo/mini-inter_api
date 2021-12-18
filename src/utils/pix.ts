@@ -9,3 +9,17 @@ export const encodeKey = (userID: string, value: number, registerID: string) => 
   return `${stage1}-${stage2}-${stage3}`
 }
 
+
+export const decodeKey = (key: string) => {
+  const keyDecode = key.split('-');
+
+  const userID = decode(keyDecode[0]);
+  const value = decode(keyDecode[1]);
+  const registerID = decode(keyDecode[2]);
+
+  return {
+    userID,
+    value,
+    registerID
+  }
+}
