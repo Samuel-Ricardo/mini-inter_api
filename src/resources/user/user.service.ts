@@ -44,7 +44,7 @@ export default class UserService {
     //@ts-expect-error ignora
     delete existUser.password
 
-    return { accessT_token: token };
+    return { access_token: token };
   }
 
   async signup(user: UserSignUp) {
