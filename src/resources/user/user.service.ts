@@ -8,8 +8,7 @@ import { UserSignUp } from "./DTOS/user.signup.dtos";
 import { User } from "../../entity/User";
 import AppError from "../../shared/error/AppError";
 import auth from "../../config/auth";
-
-
+import { error } from "../../config/messages";
 
 export default class UserService {
 
@@ -22,7 +21,7 @@ export default class UserService {
     const existUser = await userRepository.findOne({ where: { email, password: passwordHash } });
 
     if (!existUser) {
-      throw new AppError('User not found', 401);
+      throw new AppError(error.USER_NOT_FOUND, 401);
     }
 
     const { secret, expiresIn } = auth.jwt;
@@ -51,7 +50,7 @@ export default class UserService {
     const existUser = await userRepository.findOne({ where: { email: user.email } });
 
     if(!existUser){
-      throw new AppError('There is already a registered user with this email', 401);
+      throw new AppError(error.USER_ALREADY_EXISTS, 401);
     }
 
     const userData = {
@@ -78,5 +77,19 @@ export default class UserService {
     });
 
     return { accessToken: token };
+  }
+
+  async me(user: Partial<User>) {
+    const userRepository = getRepository(User);
+    const currentUser = await userRepository.findOne({ where: { id: user.id } });
+
+    if (!currentUser) {
+      throw new AppError(error.USER_NOT_FOUND, 401)
+    }
+
+    // @ts-expect-error ignora
+    delete currentUser.password;
+
+    return currentUser;
   }
 }
