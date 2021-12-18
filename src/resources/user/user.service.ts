@@ -1,14 +1,18 @@
-import { getRepository } from "typeorm";
 import { sign } from "jsonwebtoken";
 //import {MD5} from "crypto-js";
 import md5 from "crypto-js/md5";
-import { UserSignIn } from "./DTOS/user.signin.dtos";
-
-import { UserSignUp } from "./DTOS/user.signup.dtos";
-import { User } from "../../entity/User";
-import AppError from "../../shared/error/AppError";
 import auth from "../../config/auth";
+
+import AppError from "../../shared/error/AppError";
 import { error } from "../../config/messages";
+
+import { User } from "../../entity/User";
+import { getRepository } from "typeorm";
+
+import { UserSignIn } from "./DTOS/user.signin.dtos";
+import { UserSignUp } from "./DTOS/user.signup.dtos";
+
+
 
 export default class UserService {
 
