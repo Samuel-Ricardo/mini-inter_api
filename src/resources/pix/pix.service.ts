@@ -123,5 +123,15 @@ export default class PixService {
         }
       )
     );
+
+    const allTransactions = received.concat(paid);
+
+    allTransactions.sort(function (a, b) {
+      const dateA: number = new Date(a.updatedAt).getTime();
+      const dateB = new Date(b.updatedAt).getTime();
+      return dateA < dateB ? 1 : -1;
+    });
+    
+    return allTransactions;
   }
 }
