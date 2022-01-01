@@ -17,14 +17,18 @@ export const pix_messages = {
   SUCCESS: {...pix_success}
 }
 
+export const user_error = {
+  USER_NOT_FOUND: 'User not found',
+  USER_ALREADY_EXISTS: "There is already a registered user with this email",
+}
+
 export const user_messages = {
   ERROR: { ...user_error },
   SUCCESS: {...user_success}
 }
 
 export const error = {
-  USER_NOT_FOUND: 'User not found',
-  USER_ALREADY_EXISTS: "There is already a registered user with this email",
+  USER: {...user_messages.ERROR},
   PIX: { ...pix_messages.ERROR }
 }
 
