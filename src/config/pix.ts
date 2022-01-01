@@ -1,6 +1,7 @@
 
 export const status = {
-  OPEN: 'open'
+  OPEN: 'open',
+  CLOSE: 'close'
 }
 
 const pix = {
