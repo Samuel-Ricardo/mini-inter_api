@@ -1,6 +1,6 @@
 import { getRepository, Transaction } from "typeorm";
 import messages, { pix_error } from "../../config/messages";
-import { status } from "../../config/pix";
+import { status, types } from "../../config/pix";
 import { Pix } from "../../entity/Pix";
 import { User } from "../../entity/User";
 import AppError from "../../shared/error/AppError";
@@ -99,6 +99,19 @@ export default class PixService {
     }
 
     const pixPaiyng = await (await pixRepository.find(conditions));
+
+    const received = pixReceived.map(transaction => ({
+          value: transaction.value,
+          user: {
+            firstName: transaction.payingUser.firstName,
+            lastName: transaction.payingUser.lastName,
+          },
+          updatedAt: transaction.updatedAt,
+          type: types.RECEIVED
+        }
+      )
+    );
+
     
   }
 }
