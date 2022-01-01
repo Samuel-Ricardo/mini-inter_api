@@ -22,6 +22,8 @@ export const user_error = {
   USER_ALREADY_EXISTS: "There is already a registered user with this email",
 }
 
+export const user_success = {};
+
 export const user_messages = {
   ERROR: { ...user_error },
   SUCCESS: {...user_success}
