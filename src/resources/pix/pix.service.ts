@@ -98,6 +98,7 @@ export default class PixService {
       relations: ['receivingUser']
     }
 
-    const pixPaiyng = await ( await pixRepository.find(conditions) )
+    const pixPaiyng = await (await pixRepository.find(conditions));
+    
   }
 }
