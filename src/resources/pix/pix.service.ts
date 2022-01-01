@@ -83,6 +83,14 @@ export default class PixService {
 
     const pixRepository = getRepository(Pix);
 
-    
+    const pixReceived = await (
+      await pixRepository.find({
+        where: {
+        receivingUser: user.id, status: status.CLOSE
+        },
+        relations: ['payingUser']
+      })
+    )
+
   }
 }
