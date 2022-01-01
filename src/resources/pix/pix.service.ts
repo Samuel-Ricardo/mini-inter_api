@@ -86,7 +86,8 @@ export default class PixService {
     const pixReceived = await (
       await pixRepository.find({
         where: {
-        receivingUser: user.id, status: status.CLOSE
+          receivingUser: user.id,
+          status: status.CLOSE
         },
         relations: ['payingUser']
       })
@@ -97,8 +98,6 @@ export default class PixService {
       relations: ['receivingUser']
     }
 
-    const pixPaiyng = await (
-      await pixRepository.find(conditions)
-    )
+    const pixPaiyng = await ( await pixRepository.find(conditions) )
   }
 }
