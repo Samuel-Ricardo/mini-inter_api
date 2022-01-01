@@ -92,5 +92,13 @@ export default class PixService {
       })
     )
 
+    const conditions = {
+      where: {payingUser: user.id, status: status.CLOSE},
+      relations: ['receivingUser']
+    }
+
+    const pixPaiyng = await (
+      await pixRepository.find(conditions)
+    )
   }
 }
