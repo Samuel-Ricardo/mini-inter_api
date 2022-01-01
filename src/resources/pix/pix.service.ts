@@ -112,6 +112,16 @@ export default class PixService {
       )
     );
 
-    
+        const paid = pixPaiyng.map(transaction => ({
+          value: transaction.value,
+          user: {
+            firstName: transaction.receivingUser.firstName,
+            lastName: transaction.payingUser.lastName,
+          },
+          updatedAt: transaction.updatedAt,
+          type: types.PAID
+        }
+      )
+    );
   }
 }
