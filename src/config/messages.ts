@@ -1,4 +1,3 @@
-
 export const pix_error = {
   RECEIVE_PIX_FROM_SAME_USER: 'It is not possible to receive the PIX from the same user',
 
@@ -13,15 +12,21 @@ export const pix_success = {
   PAYMENT_SUCCESSFULLY: "Payment made successfully",
 }
 
+export const pix_messages = {
+  ERROR: { ...pix_error },
+  SUCCESS: {...pix_success}
+}
+
+
 export const error = {
   USER_NOT_FOUND: 'User not found',
   USER_ALREADY_EXISTS: "There is already a registered user with this email",
-  PIX: { ...pix_error }
+  PIX: { ...pix_messages.ERROR }
 }
 
 export const success = {
 
-  PIX: {...pix_success}
+  PIX: {...pix_messages.SUCCESS}
 }
 
 const messages = {
