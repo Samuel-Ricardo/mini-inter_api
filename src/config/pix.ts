@@ -4,8 +4,14 @@ export const status = {
   CLOSE: 'close'
 }
 
+export const types = {
+  RECEIVED: 'received',
+  PAID: 'paid'
+}
+
 const pix = {
-  STATUS: {...status}
+  STATUS: { ...status },
+  TYPES: {...types}
 }
 
 export default pix;
