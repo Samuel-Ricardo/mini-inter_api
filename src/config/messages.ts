@@ -9,7 +9,9 @@ export const pix_error = {
   INVALID_KEY: "Invalid key, please generate a new key"
 }
 
-
+export const pix_success = {
+  PAYMENT_SUCCESSFULLY: "Payment made successfully",
+}
 
 export const error = {
   USER_NOT_FOUND: 'User not found',
