@@ -17,6 +17,10 @@ export const pix_messages = {
   SUCCESS: {...pix_success}
 }
 
+export const user_messages = {
+  ERROR: { ...user_error },
+  SUCCESS: {...user_success}
+}
 
 export const error = {
   USER_NOT_FOUND: 'User not found',
