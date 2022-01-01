@@ -79,5 +79,10 @@ export default class PixService {
     return {msg: messages.SUCCESS.PIX.PAYMENT_SUCCESSFULLY}
   }
 
+  async transactions(user: Partial<User>) {
 
+    const pixRepository = getRepository(Pix);
+
+    
+  }
 }
