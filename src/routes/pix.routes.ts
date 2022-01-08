@@ -6,6 +6,6 @@ const pixController = new PixController();
 
 pixRoutes.post('/request', pixController.request);
 pixRoutes.post('/pay/:key', pixController.pay);
-
+pixRoutes.get('/transactions', pixController.transactions);
 
 export default pixRoutes;
