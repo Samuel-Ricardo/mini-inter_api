@@ -23,4 +23,10 @@ export default class PixController {
 
     return res.status(201).send(payment);
   }
+
+  async transactions(req:Request, res:Response) {
+    const pixService = new PixService();
+    const transactions = await pixService.transactions(req.user);
+    return res.status(201).send({transactions});
+  }
 }
