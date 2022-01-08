@@ -6,6 +6,6 @@ const userController = new UserController();
 
 userRouter.post('/singin', userController.singin);
 userRouter.post('/singnup', userController.singnup);
-
+userRouter.get('/me', userController.me);
 
 export default userRouter;
