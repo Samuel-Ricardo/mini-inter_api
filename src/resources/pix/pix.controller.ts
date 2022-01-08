@@ -14,4 +14,13 @@ export default class PixController {
     return res.status(200).send({ copyPasteKey: requestKey });
   }
 
+  async pay(req: Request, res: Response) {
+
+    const pixService = new PixService();
+
+    const { key } = req.params;
+    const payment = await pixService.pay(key, req.user);
+
+    return res.status(201).send(payment);
+  }
 }
