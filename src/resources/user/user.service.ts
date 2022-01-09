@@ -25,7 +25,7 @@ export default class UserService {
     const existUser = await userRepository.findOne({ where: { email, password: passwordHash } });
 
     if (!existUser) {
-      throw new AppError(error.USER_NOT_FOUND, 401);
+      throw new AppError(error.USER.USER_NOT_FOUND, 401);
     }
 
     const { secret, expiresIn } = auth.jwt;
@@ -54,7 +54,7 @@ export default class UserService {
     const existUser = await userRepository.findOne({ where: { email: user.email } });
 
     if(!existUser){
-      throw new AppError(error.USER_ALREADY_EXISTS, 401);
+      throw new AppError(error.USER.USER_ALREADY_EXISTS, 401);
     }
 
     const userData = {
@@ -88,7 +88,7 @@ export default class UserService {
     const currentUser = await userRepository.findOne({ where: { id: user.id } });
 
     if (!currentUser) {
-      throw new AppError(error.USER_NOT_FOUND, 401)
+      throw new AppError(error.USER.USER_NOT_FOUND, 401)
     }
 
     // @ts-expect-error ignora
