@@ -12,7 +12,7 @@
   },
 
   "scripts": {
-    "start-dev": "ts-node ./src/index.ts"
+    "start": "ts-node ./src/index.ts"
   },
 
   "dependencies": {
