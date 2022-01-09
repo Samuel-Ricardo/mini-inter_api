@@ -6,6 +6,11 @@
   "author": "Samuel_Ricardo <samuelricardoofficial@gmail.com>",
   "license": "GPL-3.0 License",
 
+  "engines": {
+    "npm": ">=6.0.0",
+    "node": ">=10.0.0"
+  },
+
   "scripts": {
     "start-dev": "ts-node ./src/index.ts"
   },
