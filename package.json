@@ -5,7 +5,6 @@
   "repository": "https://github.com/Samuel-Ricardo/mini-inter_api.git",
   "author": "Samuel_Ricardo <samuelricardoofficial@gmail.com>",
   "license": "GPL-3.0 License",
-
   "dependencies": {
     "@types/cors": "^2.8.12",
     "cors": "^2.8.5",
@@ -20,7 +19,6 @@
     "reflect-metadata": "^0.1.13",
     "typeorm": "^0.2.41"
   },
-
   "devDependencies": {
     "@types/crypto-js": "^4.0.2",
     "@types/express": "^4.17.13",
