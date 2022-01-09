@@ -1,4 +1,4 @@
-import { Connection, createConnection } from "typeorm";
+import { createConnection } from "typeorm";
 import express from 'express';
 
 import cors from 'cors';
@@ -6,7 +6,7 @@ import routes from "./routes";
 import { globalErros } from "./middlewares/globalErros";
 
 
-createConnection().then(Connection => {
+createConnection().then(connection => {
 
   const app = express();
   const PORT = process.env.PORT || 3333;
