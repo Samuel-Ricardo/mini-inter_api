@@ -9,7 +9,7 @@ import { globalErros } from "./middlewares/globalErros";
 createConnection().then(Connection => {
 
   const app = express();
-  const PORT = 3333;
+  const PORT = process.env.PORT || 3333;
 
   app.use(cors());
   app.use(express.json());
