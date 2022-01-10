@@ -13,7 +13,7 @@ console.log('')
 
 createConnection().then(connection => {
 
-connection.connect();
+//connection.connect();
 
 
 console.log('conectou')
