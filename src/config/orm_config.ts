@@ -11,5 +11,6 @@ export const orm_config:ConnectionOptions = {
   entities: ["src/entity/*.ts"],
   url: "postgres://zudedrvhejpxaq:8d076c69cbd9b71509a2a9a62cb6658f5bd5e2d72ca8f08bc2e272c6b1b96084@ec2-52-71-161-140.compute-1.amazonaws.com:5432/d2tiaunnji02b1",
   logging: true,
-  synchronize: true
+  synchronize: true,
+  ssl: true
 }
