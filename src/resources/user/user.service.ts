@@ -17,6 +17,9 @@ import { UserSignUp } from "./DTOS/user.signup.dtos";
 export default class UserService {
 
   async sigin(user: UserSignIn) {
+
+    console.log('Service')
+
     const userRepository = getRepository(User);
 
     const { email, password } = user;
@@ -25,6 +28,7 @@ export default class UserService {
     const existUser = await userRepository.findOne({ where: { email, password: passwordHash } });
 
     if (!existUser) {
+      console.log('User não existe')
       throw new AppError(error.USER.USER_NOT_FOUND, 401);
     }
 
@@ -40,6 +44,9 @@ export default class UserService {
       subject: existUser.id,
       expiresIn
     });
+
+    console.log(existUser);
+    console.log(token)
 
     //@ts-expect-error ignora
     delete existUser.password

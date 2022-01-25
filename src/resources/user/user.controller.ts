@@ -1,15 +1,19 @@
-import { Request, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 import UserService from "./user.service";
 
 export default class UserController {
 
-  async signin(req: Request, res: Response) {
-    const { email, password } = req.body;
+  async signin(req: Request, res: Response, next: NextFunction) {
+    try {
+      const { email, password } = req.body;
 
-    const userService = new UserService();
-    const users = await userService.sigin({ email, password });
+      const userService = new UserService();
+      const users = await userService.sigin({ email, password });
 
-    return res.status(200).send(users);
+      return res.status(200).send(users);
+    } catch (error) {
+      next(error)
+    }
   }
 
   async signup(req: Request, res: Response) {
