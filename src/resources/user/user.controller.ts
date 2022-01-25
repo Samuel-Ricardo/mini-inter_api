@@ -12,7 +12,7 @@ export default class UserController {
     return res.status(200).send(users);
   }
 
-  async singnup(req: Request, res: Response) {
+  async signup(req: Request, res: Response) {
     const userService = new UserService();
     const users = await userService.signup(req.body);
     return res.status(201).send(users);
