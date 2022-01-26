@@ -21,7 +21,13 @@ export default function userAuthenticated(
 
   if (!authHeader) throw new AppError('JWT Não enviado', 401);
 
+  console.log("")
+  console.log("authHeader: "+authHeader)
+
   const [, token] = authHeader.split('');
+
+  console.log("")
+  console.log("pre token: "+token)
 
   try {
 
