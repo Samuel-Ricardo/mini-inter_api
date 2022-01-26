@@ -29,7 +29,7 @@ export default class UserService {
 
     const existUser = await userRepository.findOne({ where: { email, password: passwordHash } });
 
-    console.log(await userRepository.find())
+    console.log(await userRepository.find({ where: { email } }))
 
     if (!existUser) {
       console.log('User não existe')
