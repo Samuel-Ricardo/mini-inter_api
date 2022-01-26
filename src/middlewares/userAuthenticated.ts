@@ -24,14 +24,27 @@ export default function userAuthenticated(
   const [, token] = authHeader.split('');
 
   try {
+
+    console.log("ANALISANDO TOKEN")
+    console.log("")
+    console.log(token)
+
+
     const decoded = verify(token, auth.jwt.secret);
     const { sub, first_name, last_name } = decoded as ITokenPayload;
+
+    console.log("ANALISANDO TOKEN - 2")
+    console.log("")
+    console.log(decoded)
+
 
     req.user = {
       id: sub,
       first_name,
       last_name
     }
+    console.log("")
+    console.log(user)
 
     return next();
   } catch {
