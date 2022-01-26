@@ -68,9 +68,7 @@ export default class UserService {
 
     const existUser = await userRepository.findOne({ where: { email: user.email } });
 
-    if(!existUser){
-      throw new AppError(error.USER.USER_ALREADY_EXISTS, 401);
-    }
+    if (existUser) { throw new AppError(error.USER.USER_ALREADY_EXISTS, 401) };
 
     const userData = {
       ...user,
