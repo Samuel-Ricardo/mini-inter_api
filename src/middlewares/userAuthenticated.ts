@@ -24,7 +24,7 @@ export default function userAuthenticated(
   console.log("")
   console.log("authHeader: "+authHeader)
 
-  const [, token] = authHeader.split('');
+  const [bearer, token] = authHeader.split('');
 
   console.log("")
   console.log("pre token: "+token)
