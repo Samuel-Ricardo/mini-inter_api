@@ -18,7 +18,7 @@ export default class UserController {
 
   async signup(req: Request, res: Response, next: NextFunction) {
     try {
-      
+
       const userService = new UserService();
       const users = await userService.signup(req.body);
       return res.status(201).send(users);
@@ -27,9 +27,11 @@ export default class UserController {
   }
 
   async me(req: Request, res: Response, next: NextFunction) {
-    const userService = new UserService();
-    const user = await userService.me(req.user);
+    try{
+      const userService = new UserService();
+      const user = await userService.me(req.user);
 
-    return res.status(201).send(user);
+      return res.status(201).send(user);
+    }catch(error){ next(error) }
   }
 }
