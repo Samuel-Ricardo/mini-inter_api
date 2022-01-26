@@ -44,7 +44,7 @@ export default function userAuthenticated(
       last_name
     }
     console.log("")
-    console.log(user)
+    console.log(req.user)
 
     return next();
   } catch {
