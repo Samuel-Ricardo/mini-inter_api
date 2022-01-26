@@ -29,9 +29,6 @@ export default class UserService {
 
     const existUser = await userRepository.findOne({ where: { email, password: passwordHash } });
 
-    console.log('')
-    console.log(existUser);
-
     if (!existUser) {
       console.log('User não existe')
       throw new AppError(error.USER.USER_NOT_FOUND, 401);
@@ -50,7 +47,7 @@ export default class UserService {
       expiresIn
     });
 
-    console.log(existUser);
+
     console.log(token)
 
     //@ts-expect-error ignora

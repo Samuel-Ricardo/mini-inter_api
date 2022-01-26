@@ -11,7 +11,7 @@ export default class UserController {
       const user = await userService.sigin({ email, password });
 
       console.log("")
-      console.log("tOKEN: "+user)
+      console.log("tOKEN: "+user.access_token)
       console.log("")
 
 
