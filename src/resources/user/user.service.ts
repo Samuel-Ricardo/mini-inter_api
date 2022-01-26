@@ -29,9 +29,6 @@ export default class UserService {
 
     const existUser = await userRepository.findOne({ where: { email, password: passwordHash } });
 
-    const log = await userRepository.find({ where: { email } })
-    console.log(log)
-
     console.log('')
     console.log(existUser);
 

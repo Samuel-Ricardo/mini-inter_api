@@ -8,9 +8,14 @@ export default class UserController {
       const { email, password } = req.body;
 
       const userService = new UserService();
-      const users = await userService.sigin({ email, password });
+      const user = await userService.sigin({ email, password });
 
-      return res.status(200).send(users);
+      console.log("")
+      console.log("tOKEN: "+user)
+      console.log("")
+
+
+      return res.status(200).send(user);
     } catch (error) {
       next(error)
     }
