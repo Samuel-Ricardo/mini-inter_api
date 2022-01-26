@@ -10,11 +10,6 @@ export default class UserController {
       const userService = new UserService();
       const user = await userService.sigin({ email, password });
 
-      console.log("")
-      console.log("tOKEN: "+user.access_token)
-      console.log("")
-
-
       return res.status(200).send(user);
     } catch (error) {
       next(error)

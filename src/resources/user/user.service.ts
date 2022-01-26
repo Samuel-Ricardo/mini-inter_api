@@ -47,9 +47,6 @@ export default class UserService {
       expiresIn
     });
 
-
-    console.log(token)
-
     //@ts-expect-error ignora
     delete existUser.password
 

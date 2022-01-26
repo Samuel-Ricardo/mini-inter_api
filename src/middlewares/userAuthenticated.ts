@@ -21,10 +21,13 @@ export default function userAuthenticated(
 
   if (!authHeader) throw new AppError('JWT Não enviado', 401);
 
-  const [bearer, token] = authHeader.split('');
+  const [, token] = authHeader.split(' ');
 
   console.log("")
   console.log("pre token: "+token)
+  console.log("")
+  console.log(authHeader)
+  console.log('')
 
   try {
 
