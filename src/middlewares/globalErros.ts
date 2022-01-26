@@ -2,7 +2,10 @@ import { NextFunction, Request, Response } from "express";
 import AppError from "../shared/error/AppError";
 
 
-function globalErros(err:Error, request:Request, response:Response, next:NextFunction){
+function globalErros(err: Error, request: Request, response: Response,
+  next: NextFunction) {
+
+  console.log('MDS UM ERRO - PEDRO SURPRESAS <:()');
 
   console.error(err);
 
