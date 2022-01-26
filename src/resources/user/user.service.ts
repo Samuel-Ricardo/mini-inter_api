@@ -22,10 +22,14 @@ export default class UserService {
 
     const userRepository = getRepository(User);
 
+    console.log(user)
+
     const { email, password } = user;
     const passwordHash = md5(password).toString();
 
     const existUser = await userRepository.findOne({ where: { email, password: passwordHash } });
+
+    console.log(await userRepository.find())
 
     if (!existUser) {
       console.log('User não existe')
