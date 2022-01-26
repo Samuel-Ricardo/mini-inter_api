@@ -27,7 +27,7 @@ export default function userAuthenticated(
 
     console.log("ANALISANDO TOKEN")
     console.log("")
-    console.log(token)
+    console.log("Token: "+token)
 
 
     const decoded = verify(token, auth.jwt.secret);
