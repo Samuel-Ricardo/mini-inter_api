@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, Double } from "typeorm";
 
 @Entity()
 export class User {
@@ -19,7 +19,7 @@ export class User {
   accountDigits: number;
 
   @Column()
-  wallet: number;
+  wallet: Double;
 
   @Column()
   email: string;
