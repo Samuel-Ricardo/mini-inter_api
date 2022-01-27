@@ -18,7 +18,7 @@ export class User {
   @Column()
   accountDigits: number;
 
-  @Column()
+  @Column('decimal',  {scale:2})
   wallet: number;
 
   @Column()
