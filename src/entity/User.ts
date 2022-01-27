@@ -19,7 +19,7 @@ export class User {
   accountDigits: number;
 
   @Column()
-  wallet: Double;
+  wallet: number;
 
   @Column()
   email: string;
