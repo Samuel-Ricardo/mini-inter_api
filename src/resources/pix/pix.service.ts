@@ -105,7 +105,7 @@ export default class PixService {
         receivingUser: user.id,
         status: status.CLOSE
       },
-      relations: ['receivingUser']
+      relations: ['payingUser']
     });
 
 
@@ -117,7 +117,7 @@ export default class PixService {
 
     const pixPaiyng = await pixRepository.find({
       where: {payingUser: user.id, status: status.CLOSE},
-      relations: ['payingUser']
+      relations: ['receivingUser']
     });
 
     console.log('')
@@ -128,8 +128,8 @@ export default class PixService {
     const received = pixReceived.map(transaction => ({
           value: transaction.value,
           user: {
-            firstName: transaction.receivingUser.firstName,
-            lastName: transaction.receivingUser.lastName,
+            firstName: transaction.payingUser.firstName,
+            lastName: transaction.payingUser.lastName,
           },
           updatedAt: transaction.updatedAt,
           type: types.RECEIVED
@@ -140,8 +140,8 @@ export default class PixService {
         const paid = pixPaiyng.map(transaction => ({
           value: transaction.value,
           user: {
-            firstName: transaction.payingUser.firstName,
-            lastName: transaction.payingUser.lastName,
+            firstName: transaction.receivingUser.firstName,
+            lastName: transaction.receivingUser.lastName,
           },
           updatedAt: transaction.updatedAt,
           type: types.PAID
