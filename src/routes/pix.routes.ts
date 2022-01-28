@@ -7,8 +7,8 @@ const pixController = new PixController();
 
 pixRoutes.use(userAuthenticated);
 
-pixRoutes.post('/request', pixController.request);
-pixRoutes.post('/pay/:key', pixController.pay);
-pixRoutes.get('/transactions', pixController.transactions);
+pixRoutes.post('/request', userAuthenticated, pixController.request);
+pixRoutes.post('/pay/:key', userAuthenticated, pixController.pay);
+pixRoutes.get('/transactions', userAuthenticated, pixController.transactions);
 
 export default pixRoutes;

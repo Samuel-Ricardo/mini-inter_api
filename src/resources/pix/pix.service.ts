@@ -16,13 +16,23 @@ export default class PixService {
 
     const currentUser = await userRepository.findOne({ where: { id: user.id } });
 
+    console.log(currentUser);
+
     const requestData = {
-      requestingUser: currentUser,
+      receivingUser: currentUser,
       value,
       status: status.OPEN
     };
 
+    console.log('')
+    console.log('REQUEST DATA')
+    console.log(requestData);
+    console.log('')
+
     const register = await pixRepository.save(requestData);
+
+    console.log(register);
+
 
     const key = encodeKey(user.id || '', value, register.id);
 
@@ -83,22 +93,32 @@ export default class PixService {
 
     const pixRepository = getRepository(Pix);
 
-    const pixReceived = await (
-      await pixRepository.find({
-        where: {
-          receivingUser: user.id,
-          status: status.CLOSE
-        },
-        relations: ['payingUser']
-      })
-    )
+    console.log(await pixRepository.find())
 
-    const conditions = {
+    const pixReceived = await pixRepository.find({
+      where: {
+        receivingUser: user.id,
+        status: status.CLOSE
+      },
+      relations: ['payingUser']
+    });
+
+
+    console.log('')
+    console.log('Pix Received')
+    console.log(pixReceived)
+    console.log('')
+
+
+    const pixPaiyng = await pixRepository.find({
       where: {payingUser: user.id, status: status.CLOSE},
       relations: ['receivingUser']
-    }
+    });
 
-    const pixPaiyng = await (await pixRepository.find(conditions));
+    console.log('')
+    console.log('Pix Pay')
+    console.log(pixPaiyng)
+    console.log('')
 
     const received = pixReceived.map(transaction => ({
           value: transaction.value,
@@ -112,6 +132,11 @@ export default class PixService {
       )
     );
 
+    console.log('')
+    console.log('Received')
+    console.log(received)
+    console.log('')
+
         const paid = pixPaiyng.map(transaction => ({
           value: transaction.value,
           user: {
@@ -124,14 +149,30 @@ export default class PixService {
       )
     );
 
+    console.log('')
+    console.log('Paid')
+    console.log(paid)
+    console.log('')
+
     const allTransactions = received.concat(paid);
+
+    console.log('')
+    console.log('all Transactions')
+    console.log(allTransactions)
+    console.log('')
 
     allTransactions.sort(function (a, b) {
       const dateA: number = new Date(a.updatedAt).getTime();
       const dateB = new Date(b.updatedAt).getTime();
       return dateA < dateB ? 1 : -1;
     });
-    
+
+    console.log('')
+    console.log('all Transactions sort')
+    console.log(allTransactions)
+    console.log('')
+
+
     return allTransactions;
   }
 }
