@@ -20,11 +20,13 @@ export default class PixController {
     try {
       const pixService = new PixService();
 
+      console.log(req.user)
+
       const { key } = req.params;
       const payment = await pixService.pay(key, req.user);
 
       return res.status(201).send(payment);
-      
+
     } catch (error) { next(error) }
   }
 

@@ -56,6 +56,11 @@ export default class PixService {
       });
     const payingUser = await userRepository.findOne({ where: { id: user.id } })
 
+    console.log('')
+    console.log('Payng user')
+    console.log(payingUser)
+    console.log('')
+
     if (payingUser?.wallet && payingUser.wallet < Number(keyDecoded.value)) {
       throw new AppError(pix_error.INSUFFICIENT_FUNDS, 401)
     }
@@ -100,7 +105,7 @@ export default class PixService {
         receivingUser: user.id,
         status: status.CLOSE
       },
-      relations: ['payingUser']
+      relations: ['receivingUser']
     });
 
 
@@ -112,7 +117,7 @@ export default class PixService {
 
     const pixPaiyng = await pixRepository.find({
       where: {payingUser: user.id, status: status.CLOSE},
-      relations: ['receivingUser']
+      relations: ['payingUser']
     });
 
     console.log('')
@@ -131,11 +136,6 @@ export default class PixService {
         }
       )
     );
-
-    console.log('')
-    console.log('Received')
-    console.log(received)
-    console.log('')
 
         const paid = pixPaiyng.map(transaction => ({
           value: transaction.value,
