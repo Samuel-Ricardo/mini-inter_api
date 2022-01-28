@@ -1,4 +1,5 @@
 import { NextFunction, Request, Response } from "express";
+import { nextTick } from "process";
 import PixService from "./pix.service";
 
 export default class PixController {
@@ -14,14 +15,17 @@ export default class PixController {
     return res.status(200).send({ copyPasteKey: requestKey });
   }
 
-  async pay(req: Request, res: Response) {
+  async pay(req: Request, res: Response, next:NextFunction) {
 
-    const pixService = new PixService();
+    try {
+      const pixService = new PixService();
 
-    const { key } = req.params;
-    const payment = await pixService.pay(key, req.user);
+      const { key } = req.params;
+      const payment = await pixService.pay(key, req.user);
 
-    return res.status(201).send(payment);
+      return res.status(201).send(payment);
+      
+    } catch (error) { next(error) }
   }
 
   async transactions(req:Request, res:Response) {
