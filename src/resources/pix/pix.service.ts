@@ -128,8 +128,8 @@ export default class PixService {
     const received = pixReceived.map(transaction => ({
           value: transaction.value,
           user: {
-            firstName: transaction.payingUser.firstName,
-            lastName: transaction.payingUser.lastName,
+            firstName: transaction.receivingUser.firstName,
+            lastName: transaction.receivingUser.lastName,
           },
           updatedAt: transaction.updatedAt,
           type: types.RECEIVED
@@ -140,7 +140,7 @@ export default class PixService {
         const paid = pixPaiyng.map(transaction => ({
           value: transaction.value,
           user: {
-            firstName: transaction.receivingUser.firstName,
+            firstName: transaction.payingUser.firstName,
             lastName: transaction.payingUser.lastName,
           },
           updatedAt: transaction.updatedAt,
