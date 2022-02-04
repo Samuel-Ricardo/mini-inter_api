@@ -45,9 +45,9 @@ This API is part of a full-stack project that aims to make a small project of a 
 
 #
    
-Site [frontend] -
+Site [frontend] - <a href="http://mini-inter.vercel.app/">Mini Inter</a>
 
-Repo -
+Repo - <a href="https://github.com/Samuel-Ricardo/mini-inter-site">Mini Inter Site</a>
    
 This API is hosted on <a href='https://mini-inter-api.herokuapp.com/'> Heroku </a> 
   
