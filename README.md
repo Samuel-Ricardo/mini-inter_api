@@ -39,10 +39,12 @@
 
 <br>
 
-<p align="center" id="project"> <img width="40px" src="https://feirao-credito.fiesp.com.br/img/banco-inter.png"/> Inter is a Brazilian fintech, with the main function of a 100% digital bank with a 100% tariff free digital account, in addition to being a bank, it has investment, insurance, online shopping platforms, among others, all within a super App.
+<p align="center" id="project">Inter is a Brazilian fintech, with the main function of a 100% digital bank with a 100% tariff free digital account, in addition to being a bank, it has investment, insurance, online shopping platforms, among others, all within a super App.
 
 This API is part of a full-stack project that aims to make a small project of a mini bank based on Inter, with account registration, transfer via pix, transfer history and among others.
 
+   <img width="40px" src="https://feirao-credito.fiesp.com.br/img/banco-inter.png"/>
+	
 #
    
 Site - <a href="http://mini-inter.vercel.app/">Mini Inter</a>
@@ -51,4 +53,33 @@ Repo [frontend] - <a href="https://github.com/Samuel-Ricardo/mini-inter-site">Mi
    
 This API is hosted on <a href='https://mini-inter-api.herokuapp.com/'> Heroku </a> 
   
+#
+   <p id="routes"/>
+   
+##  :construction: API Routes:  
+
+ <h3><b> Base URL - https://mini-inter-api.herokuapp.com/ </b></h3>
+
+</br>
+   
+- <b> User Routes - /user </b>
+   
+<p>   - Create - POST - /signup </p>
+<p>   - Login - POST - /signin </p>
+<p>   - Get Logged User - GET - /me </p>
+   
+#
+
+- <b> Pix Routes - /pix </b>
+   
+ <p>   - Request - POST - /request </p>
+ <p>   - Pay - POST - /pay/:key </p>
+ <p>   - Get all transactions of user - GET - /transactions </p>
+
+#
+
+<p align="justfy">
+	All routes have error coverage, some are accessible only to authenticated users, some logics were applied such as: a user cannot send a pix to himself, he cannot pay an amount greater than his balance, among other features
+</p>
+   
 #
