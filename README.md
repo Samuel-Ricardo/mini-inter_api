@@ -83,3 +83,24 @@ This API is hosted on <a href='https://mini-inter-api.herokuapp.com/'> Heroku </
 </p>
    
 #
+
+<h2 id="techs">
+  🛠 Main Technologies and Concepts Studieds:
+</h2>
+
+- Typescript
+- @Types
+- REST
+- Token Authentication
+- JWT
+- cryptography
+- js-base64
+- Relational Database
+- Postgres SQL
+- TypeORM
+- Deploy
+- Host API
+- Middlewares
+- Error Coverage
+- DTO
+- Clean Code
