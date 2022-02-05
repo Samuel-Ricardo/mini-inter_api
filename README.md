@@ -100,6 +100,7 @@ This API is hosted on <a href='https://mini-inter-api.herokuapp.com/'> Heroku </
 - TypeORM
 - Deploy
 - Host API
+- Heroku
 - Middlewares
 - Error Coverage
 - DTO
