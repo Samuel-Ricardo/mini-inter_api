@@ -144,8 +144,6 @@ This API is hosted on <a href='https://mini-inter-api.herokuapp.com/'> Heroku </
 
 ```
 
-- <p> Now Your server is running in <b><a href="http://localhost:3000/">localhost:3000</a></b> </p>
-
  <br>
   <br>
   
