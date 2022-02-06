@@ -105,3 +105,38 @@ This API is hosted on <a href='https://mini-inter-api.herokuapp.com/'> Heroku </
 - Error Coverage
 - DTO
 - Clean Code
+
+<br/>
+
+<h2 id="run-project">
+  :zap: Run Project
+</h2>
+
+### Open Your Git Terminal and Clone This Repositore:
+
+  ```git
+  
+  $ git clone "https://github.com/Samuel-Ricardo/mini-inter_api"
+  
+  ```
+  
+### Make pull:
+
+  ```git
+  
+  $ git pull "https://github.com/Samuel-Ricardo/mini-inter_api"
+  
+  ```
+  
+### Run Application With Maven
+
+```cmd
+
+  $ npm start || yarn start 
+
+```
+
+- <p> Now Your server is running in <b><a href="http://localhost:3000/">localhost:3000</a></b> </p>
+
+ <br>
+ <br>
