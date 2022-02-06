@@ -128,7 +128,15 @@ This API is hosted on <a href='https://mini-inter-api.herokuapp.com/'> Heroku </
   
   ```
   
-### Run Application With Maven
+### Install Dependencies
+
+```cmd
+
+  $ npm install || yarn 
+
+```
+  
+### Run Application
 
 ```cmd
 
@@ -139,4 +147,34 @@ This API is hosted on <a href='https://mini-inter-api.herokuapp.com/'> Heroku </
 - <p> Now Your server is running in <b><a href="http://localhost:3000/">localhost:3000</a></b> </p>
 
  <br>
- <br>
+  <br>
+  
+  <h2 id="author">
+  :octocat: Author
+</h2>
+
+<br>
+
+<a href="https://www.linkedin.com/in/samuel-ricardo-cabral/">
+
+  <img width="250px" src="https://github.com/Samuel-Ricardo/mini-inter_api/blob/master/readme_files/1600746443307.jpg"/>
+
+  <br>
+
+   <p><b>Samuel Ricardo</b></p>
+   
+</a>
+
+<h1 align="rigth">
+  
+<a href="https://www.linkedin.com/in/samuel-ricardo-cabral/">
+  
+  <img width = "115px" src="https://img.shields.io/badge/Linkedin-1781EB?color=black&style=for-the-badge&logo=LinkedIn&logoColor=blue" /> 
+  
+<a>
+
+<a href="https://www.instagram.com/samuel_ricardo.ex/">
+  
+  <img width = "130px" src="https://img.shields.io/badge/Instagram-1781EB?color=black&style=for-the-badge&logo=Instagram" /> 
+  
+<a>
