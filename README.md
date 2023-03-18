@@ -28,12 +28,12 @@
     <img src='https://img.shields.io/static/v1?label=&message=Samuel.ex&color=black&style=for-the-badge&logo=instagram'> 
   </a>
   
-   <a herf='https://www.linkedin.com/in/samuel-ricardo-cabral/'>
+   <a herf='https://www.linkedin.com/in/samuel-ricardo/'>
     <img src='https://img.shields.io/static/v1?label=&message=Samuel%20Ricardo&color=black&style=for-the-badge&logo=LinkedIn'> 
   </a>
       
   <a href="https://web.digitalinnovation.one/users/samuelricardoofficial?tab=achievements">
-    <img alt="DIO" src="https://url.gratis/i5PyNS">
+    <img alt="DIO" src="https://user-images.githubusercontent.com/63983021/224881002-d18e94b6-9c20-4b0f-855e-1ab0bc248d87.png">
   </a>
 </h1>
 
@@ -153,7 +153,7 @@ This API is hosted on <a href='https://mini-inter-api.herokuapp.com/'> Heroku </
 
 <br>
 
-<a href="https://www.linkedin.com/in/samuel-ricardo-cabral/">
+<a href="https://www.linkedin.com/in/samuel-ricardo/">
 
   <img width="250px" src="https://github.com/Samuel-Ricardo/mini-inter_api/blob/master/readme_files/1600746443307.jpg"/>
 
@@ -165,7 +165,7 @@ This API is hosted on <a href='https://mini-inter-api.herokuapp.com/'> Heroku </
 
 <h1 align="rigth">
   
-<a href="https://www.linkedin.com/in/samuel-ricardo-cabral/">
+<a href="https://www.linkedin.com/in/samuel-ricardo/">
   
   <img width = "115px" src="https://img.shields.io/badge/Linkedin-1781EB?color=black&style=for-the-badge&logo=LinkedIn&logoColor=blue" /> 
   
