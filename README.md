@@ -155,7 +155,7 @@ This API is hosted on <a href='https://mini-inter-api.herokuapp.com/'> Heroku </
 
 <a href="https://www.linkedin.com/in/samuel-ricardo/">
 
-  <img width="250px" src="https://github.com/Samuel-Ricardo/mini-inter_api/blob/master/readme_files/1600746443307.jpg"/>
+  <img width="250px" src="https://github.com/Samuel-Ricardo/bolao-da-copa/raw/main/readme_files/IMG_20220904_220148_188.jpg"/>
 
   <br>
 
